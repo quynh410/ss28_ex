@@ -19,7 +19,7 @@ public class Main {
             connection = ConnectionDB.openConnection();
             connection.setAutoCommit(false);
 
-            String procedureCall = "{call placebid(?, ?, ?)}";
+            String procedureCall = "{call Bid(?, ?, ?)}";
             callableStatement = connection.prepareCall(procedureCall);
             callableStatement.setInt(1, auctionId);
             callableStatement.setInt(2, userId);
